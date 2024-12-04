@@ -25,7 +25,7 @@ fi
 
 max_retry=3; delay=30; i=1
 while true; do
-    buildvers=($(python build/get_buildvers.py no_snapshots $pom | tr -d ',')) &&
+    buildvers=($(python build/get_buildvers.py buildvers.no_snapshots $pom | tr -d ',')) &&
     {
         for buildver in "${buildvers[@]}"; do
             mvn $COMMON_MVN_FLAGS --file $pom -Dbuildver=$buildver de.qaware.maven:go-offline-maven-plugin:resolve-dependencies

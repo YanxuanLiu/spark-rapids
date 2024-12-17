@@ -14,6 +14,8 @@
 
 import sys
 
+print("for test only")
+
 def do_it():
     outstanding = {}
     line_num = 0

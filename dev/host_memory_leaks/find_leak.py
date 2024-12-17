@@ -14,6 +14,9 @@
 
 import sys
 
+print("for test only")
+print('test update merge branch')
+
 def do_it():
     outstanding = {}
     line_num = 0

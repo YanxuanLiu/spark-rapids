@@ -23,6 +23,8 @@
 static bool include_traces = getenv("LEAK_DETECT_TRACE") != nullptr;
 static pthread_mutex_t mutex_lock;
 
+
+
 extern "C" {
   void init_leak_detect() {
     pthread_mutex_init(&mutex_lock, NULL);

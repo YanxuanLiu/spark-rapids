@@ -58,18 +58,20 @@ jobs:
           echo "dailyCacheKey=$cacheKey" | tee $GITHUB_ENV $GITHUB_OUTPUT
       - name: Cache local Maven repository
         id: cache
+        continue-on-error: true
         uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ env.dailyCacheKey }}
           restore-keys: ${{ runner.os }}-maven-
       - name: populate-daily-cache
-        timeout-minutes: 30
+        timeout-minutes: 1
         continue-on-error: true
         if: steps.cache.outputs.cache-hit != 'true'
         env:
           SCALA_VER: '2.12'
         run: |
+          sleep 70
           . .github/workflows/mvn-verify-check/populate-daily-cache.sh
       - name: all shim versions
         id: all212ShimVersionsStep
@@ -120,6 +122,7 @@ jobs:
           java-version: 8
 
       - name: Cache local Maven repository
+        continue-on-error: true
         uses: actions/cache@v4
         with:
           path: ~/.m2
@@ -173,6 +176,7 @@ jobs:
           echo "scala213dailyCacheKey=$cacheKey" | tee $GITHUB_ENV $GITHUB_OUTPUT
       - name: Cache local Maven repository
         id: cache
+        continue-on-error: true
         uses: actions/cache@v4
         with:
           path: ~/.m2
@@ -227,6 +231,7 @@ jobs:
           java-version: 17
 
       - name: Cache local Maven repository
+        continue-on-error: true
         uses: actions/cache@v4
         with:
           path: ~/.m2
@@ -282,6 +287,7 @@ jobs:
           java-version: 17
 
       - name: Cache local Maven repository
+        continue-on-error: true
         uses: actions/cache@v4
         with:
           path: ~/.m2
@@ -336,6 +342,7 @@ jobs:
           java-version: ${{ matrix.java-version }}
 
       - name: Cache local Maven repository
+        continue-on-error: true
         uses: actions/cache@v4
         with:
           path: ~/.m2
@@ -383,6 +390,7 @@ jobs:
           java-version: 11
 
       - name: Cache local Maven repository
+        continue-on-error: true
         uses: actions/cache@v4
         with:
           path: ~/.m2

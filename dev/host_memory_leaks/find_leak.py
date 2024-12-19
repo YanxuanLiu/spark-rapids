@@ -16,6 +16,7 @@ import sys
 
 print("for test only")
 print('test update merge branch')
+print('test changelog')
 
 def do_it():
     outstanding = {}

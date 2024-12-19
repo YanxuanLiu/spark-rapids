@@ -65,12 +65,13 @@ jobs:
           key: ${{ env.dailyCacheKey }}
           restore-keys: ${{ runner.os }}-maven-
       - name: populate-daily-cache
-        timeout-minutes: 30
+        timeout-minutes: 1
         continue-on-error: true
         if: steps.cache.outputs.cache-hit != 'true'
         env:
           SCALA_VER: '2.12'
         run: |
+          sleep 70
           . .github/workflows/mvn-verify-check/populate-daily-cache.sh
       - name: all shim versions
         id: all212ShimVersionsStep

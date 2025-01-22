@@ -34,7 +34,7 @@ jobs:
           fetch-depth: ${{ env.PR_FETCH_DEPTH }}
 
       - name: license-header-check
-        uses: YanxuanLiu/spark-rapids-common/license-header-check@optimize-header-check
+        uses: YanxuanLiu/spark-rapids-common/license-header-check@test-header-check
         with:
           included_file_patterns: |
             *.yml,

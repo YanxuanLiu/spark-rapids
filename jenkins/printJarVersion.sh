@@ -16,6 +16,8 @@
 #
 set -e
 
+
+
 function print_ver(){
     TAG=$1
     REPO=$2

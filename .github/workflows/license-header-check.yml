@@ -33,6 +33,11 @@ jobs:
         with:
           fetch-depth: ${{ env.PR_FETCH_DEPTH }}
 
+      - name: test-vars
+        run: |
+          echo "${{ github.event.pull_request.base.ref }}"
+          echo "${{ github.event.pull_request.head.ref }}"
+
       - name: license-header-check
         uses: YanxuanLiu/spark-rapids-common/license-header-check@header-check-merge-to-main
         with:

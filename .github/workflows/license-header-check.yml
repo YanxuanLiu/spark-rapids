@@ -35,8 +35,11 @@ jobs:
 
       - name: test-vars
         run: |
-          echo "${{ github.event.pull_request.base.ref }}"
-          echo "${{ github.event.pull_request.head.ref }}"
+          echo "触发 PR 编号: ${{ github.event.number }}"
+          echo "源分支: ${{ github.event.pull_request.head.ref }}"
+          echo "目标分支: ${{ github.event.pull_request.base.ref }}"
+          echo "是否为 Fork: ${{ github.event.pull_request.head.repo.fork }}"
+          echo "源仓库: ${{ github.event.pull_request.head.repo.full_name }}"
 
       - name: license-header-check
         uses: YanxuanLiu/spark-rapids-common/license-header-check@header-check-merge-to-main

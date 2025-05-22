@@ -26,3 +26,5 @@ jobs:
     steps:
       - name: pr-desciption-check
         uses: YanxuanLiu/spark-rapids-common/pr-description-check@pr-desc-check
+        with:
+          github-token: ${{ secrets.PROJECT_TOKEN }}

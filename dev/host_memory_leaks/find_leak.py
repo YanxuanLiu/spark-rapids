@@ -16,6 +16,7 @@ import sys
 
 
 
+
 def do_it():
     outstanding = {}
     line_num = 0

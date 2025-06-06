@@ -14,10 +14,9 @@
 
 import sys
 
-
-
-
 def do_it():
+
+    
     outstanding = {}
     line_num = 0
     for l in sys.stdin:

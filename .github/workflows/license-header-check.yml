@@ -55,4 +55,4 @@ jobs:
             *target/*,
             thirdparty/*,
             sql-plugin/src/main/java/com/nvidia/spark/rapids/format/*
- 
+          check_main: true

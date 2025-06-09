@@ -17,6 +17,7 @@
 
 set -ex
 
+
 . jenkins/version-def.sh
 
 ## MVN_OPT : maven options environment, e.g. MVN_OPT='-Dspark-rapids-jni.version=xxx' to specify spark-rapids-jni dependency's version.

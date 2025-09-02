@@ -27,6 +27,7 @@
     <description>The root project of the RAPIDS Accelerator for Apache Spark</description>
     <version>25.10.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    
 
     <url>https://nvidia.github.io/spark-rapids/</url>
     <licenses>

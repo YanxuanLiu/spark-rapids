@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 
+
 # This script installs dependencies required to build RAPIDS Accelerator for Apache Spark on DB.
 # All the environments can be overwritten by shell variables:
 #   SPARKSRCTGZ: Archive file location of the plugin repository. Default is empty.

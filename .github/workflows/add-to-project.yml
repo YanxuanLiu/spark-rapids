@@ -24,10 +24,10 @@ on:
 
 jobs:
   Add-to-project:
-    if: github.repository_owner == 'NVIDIA' # avoid adding issues from forks
+    if: github.repository_owner == 'YanxuanLiu' # temporary fork test
     runs-on: ubuntu-latest
     steps:
       - name: add-to-project
-        uses: NVIDIA/spark-rapids-common/add-to-project@main
+        uses: YanxuanLiu/spark-rapids-common/add-to-project@fork-roadmap-test
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
